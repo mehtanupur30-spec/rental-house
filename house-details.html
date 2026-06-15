@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villa Marina · RentEase Admin</title>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  
+  <link href="assets/css/app.css" rel="stylesheet">
+</head>
+<body class="app-shell">
+
+  
+  
+<aside class="sidebar">
+
+  
+  <div class="sidebar__brand">
+    <div class="brand-logo"><i class="bi bi-houses-fill"></i></div>
+    <div class="brand-name">Rent<span>Ease</span></div>
+  </div>
+
+  
+  <nav class="sidebar__scroll">
+
+    <div class="nav-label">Overview</div>
+    <a class="nav-link " href="dashboard.html">
+      <i class="bi bi-grid-1x2-fill"></i> <span>Dashboard</span>
+    </a>
+
+    <div class="nav-label">Operations</div>
+    <a class="nav-link active" href="houses.html">
+      <i class="bi bi-building"></i> <span>House Management</span>
+    </a>
+    <a class="nav-link " href="customers.html">
+      <i class="bi bi-people-fill"></i> <span>Parties / Customers</span>
+    </a>
+    <a class="nav-link " href="bookings.html">
+      <i class="bi bi-calendar2-check-fill"></i> <span>Bookings</span>
+      <span class="nav-badge">6</span>
+    </a>
+    <a class="nav-link " href="payments.html">
+      <i class="bi bi-cash-coin"></i> <span>Payments</span>
+    </a>
+
+    <div class="nav-label">Insights & Tools</div>
+    <a class="nav-link " href="reports.html">
+      <i class="bi bi-bar-chart-line-fill"></i> <span>Reports</span>
+    </a>
+    <a class="nav-link " href="whatsapp.html">
+      <i class="bi bi-whatsapp"></i> <span>WhatsApp Share</span>
+    </a>
+    <a class="nav-link " href="settings.html">
+      <i class="bi bi-gear-fill"></i> <span>Settings</span>
+    </a>
+  </nav>
+</aside>
+
+
+  
+  <div class="sidebar-backdrop"></div>
+
+  
+  <div class="main">
+
+    
+    
+<header class="topbar">
+
+  
+  <button class="icon-btn" data-sidebar-toggle aria-label="Toggle menu">
+    <i class="bi bi-list"></i>
+  </button>
+
+  
+  <div class="topbar__search">
+    <i class="bi bi-search"></i>
+    <input type="search" placeholder="Search houses, bookings, customers…" aria-label="Search">
+  </div>
+
+  <div class="ms-auto d-flex align-items-center gap-2">
+
+    
+    <a href="bookings.html" class="btn btn-primary d-none d-sm-inline-flex align-items-center gap-2">
+      <i class="bi bi-plus-lg"></i> New Booking
+    </a>
+
+    
+    <div class="dropdown">
+      <button class="icon-btn" data-bs-toggle="dropdown" aria-label="Notifications">
+        <i class="bi bi-bell"></i><span class="dot"></span>
+      </button>
+      <div class="dropdown-menu dropdown-menu-end" style="width:340px">
+        <div class="d-flex justify-content-between align-items-center px-2 py-1">
+          <strong>Notifications</strong>
+          <span class="badge-soft b-booked">3 new</span>
+        </div>
+        <hr class="my-2">
+        <a class="notif-item text-reset" href="bookings.html">
+          <div class="notif-ico tile-green"><i class="bi bi-calendar-check"></i></div>
+          <div><div class="fw-semibold small">New booking confirmed</div>
+            <div class="cell-sub">Villa Marina · check-in Jun 18</div></div>
+        </a>
+        <a class="notif-item text-reset" href="payments.html">
+          <div class="notif-ico tile-amber"><i class="bi bi-exclamation-circle"></i></div>
+          <div><div class="fw-semibold small">Pending balance reminder</div>
+            <div class="cell-sub">₹18,000 due from R. Mehta</div></div>
+        </a>
+        <a class="notif-item text-reset" href="houses.html">
+          <div class="notif-ico tile-blue"><i class="bi bi-house-add"></i></div>
+          <div><div class="fw-semibold small">Listing went live</div>
+            <div class="cell-sub">Cedar Cottage is now available</div></div>
+        </a>
+        <hr class="my-2">
+        <a href="bookings.html" class="dropdown-item text-center text-orange fw-semibold">View all activity</a>
+      </div>
+    </div>
+
+    
+    <div class="dropdown">
+      <div class="topbar__profile" data-bs-toggle="dropdown" role="button">
+        <div class="avatar">AM</div>
+        <div class="profile-name lh-1">
+          <div class="fw-semibold small">Anita Malhotra</div>
+          <div class="cell-sub">Administrator</div>
+        </div>
+        <i class="bi bi-chevron-down small text-muted-2"></i>
+      </div>
+      <div class="dropdown-menu dropdown-menu-end" style="width:220px">
+        <div class="px-2 py-1 small text-soft">Signed in as<br><strong class="text-dark">anita@rentease.app</strong></div>
+        <hr class="my-2">
+        <a class="dropdown-item" href="settings.html"><i class="bi bi-person"></i> My Profile</a>
+        <a class="dropdown-item" href="settings.html"><i class="bi bi-gear"></i> Settings</a>
+        <a class="dropdown-item" href="reports.html"><i class="bi bi-graph-up"></i> Reports</a>
+        <hr class="my-2">
+        <a class="dropdown-item text-danger" href="login.html"><i class="bi bi-box-arrow-right"></i> Sign out</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    
+    <main class="content">
+
+      
+      <div class="page-head">
+        <div>
+          <h1>Villa Marina</h1>
+          <p class="text-soft mb-2">Goa Beachfront · Villa · 4 Beds</p>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="dashboard.html"><i class="bi bi-house-door"></i></a></li>
+              
+  <li class="breadcrumb-item"><a href="houses.html">Houses</a></li>
+  <li class="breadcrumb-item active">Villa Marina</li>
+
+            </ol>
+          </nav>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+          
+  <a href="whatsapp.html" class="btn btn-whatsapp"><i class="bi bi-whatsapp me-1"></i> Share</a>
+  <button class="btn btn-outline-navy"><i class="bi bi-pencil me-1"></i> Edit</button>
+  <a href="bookings.html" class="btn btn-primary"><i class="bi bi-calendar-plus me-1"></i> Book now</a>
+
+        </div>
+      </div>
+
+      
+      
+<div class="row g-3">
+
+  
+  <div class="col-12 col-lg-8">
+
+    
+    <div class="card mb-3">
+      <div class="card-body">
+        <div class="gallery-main">
+          <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=1000&q=80" alt="Villa Marina" data-gallery-main>
+        </div>
+        <div class="gallery-thumbs">
+          <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=300&q=80" class="active" data-gallery-thumb alt="">
+          <img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=300&q=80" data-gallery-thumb alt="">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=300&q=80" data-gallery-thumb alt="">
+          <img src="https://images.unsplash.com/photo-1556912172-45b7abe8b7e1?w=300&q=80" data-gallery-thumb alt="">
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="card mb-3">
+      <div class="card-header">Video Tour</div>
+      <div class="card-body">
+        <div class="video-frame" style="background-image:linear-gradient(rgba(12,23,48,.35),rgba(12,23,48,.55)),https:.html">
+          <button class="video-play" data-toast="Playing video tour…" aria-label="Play video"><i class="bi bi-play-fill"></i></button>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mt-3">
+          <span class="cell-sub"><i class="bi bi-camera-video text-orange"></i> 1:24 walkthrough · uploaded 12 Jun</span>
+          <a href="whatsapp.html" class="btn btn-whatsapp btn-sm"><i class="bi bi-whatsapp me-1"></i> Share video</a>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="card mb-3">
+      <div class="card-header">Property Information</div>
+      <div class="card-body">
+        <p class="text-soft">A sea-facing four-bedroom villa with a private pool, landscaped garden and direct beach access. Fully furnished and ideal for families or group getaways.</p>
+        <div class="row g-3 mt-1">
+          <div class="col-6 col-md-3"><div class="cell-sub">Type</div><div class="cell-strong">Villa</div></div>
+          <div class="col-6 col-md-3"><div class="cell-sub">Bedrooms</div><div class="cell-strong">4</div></div>
+          <div class="col-6 col-md-3"><div class="cell-sub">Bathrooms</div><div class="cell-strong">3</div></div>
+          <div class="col-6 col-md-3"><div class="cell-sub">Area</div><div class="cell-strong">2,400 sqft</div></div>
+          <div class="col-6 col-md-3"><div class="cell-sub">Max guests</div><div class="cell-strong">10</div></div>
+          <div class="col-6 col-md-3"><div class="cell-sub">Floors</div><div class="cell-strong">2</div></div>
+          <div class="col-6 col-md-3"><div class="cell-sub">Parking</div><div class="cell-strong">3 cars</div></div>
+          <div class="col-6 col-md-3"><div class="cell-sub">Listed</div><div class="cell-strong">Jan 2026</div></div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="card">
+      <div class="card-header">Facilities</div>
+      <div class="card-body">
+        <div class="row g-2">
+          
+          <div class="col-6 col-md-4">
+            <div class="facility"><i class="bi bi-wifi"></i> Wi-Fi</div>
+          </div>
+          
+          <div class="col-6 col-md-4">
+            <div class="facility"><i class="bi bi-water"></i> Private Pool</div>
+          </div>
+          
+          <div class="col-6 col-md-4">
+            <div class="facility"><i class="bi bi-snow2"></i> Air Conditioning</div>
+          </div>
+          
+          <div class="col-6 col-md-4">
+            <div class="facility"><i class="bi bi-cup-hot"></i> Kitchen</div>
+          </div>
+          
+          <div class="col-6 col-md-4">
+            <div class="facility"><i class="bi bi-tv"></i> Smart TV</div>
+          </div>
+          
+          <div class="col-6 col-md-4">
+            <div class="facility"><i class="bi bi-p-circle"></i> Free Parking</div>
+          </div>
+          
+          <div class="col-6 col-md-4">
+            <div class="facility"><i class="bi bi-shield-check"></i> 24×7 Security</div>
+          </div>
+          
+          <div class="col-6 col-md-4">
+            <div class="facility"><i class="bi bi-flower1"></i> Garden</div>
+          </div>
+          
+          <div class="col-6 col-md-4">
+            <div class="facility"><i class="bi bi-fire"></i> BBQ Area</div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="col-12 col-lg-4">
+
+    <div class="card mb-3">
+      <div class="card-body text-center">
+        <span class="badge-soft b-available mb-2">Available</span>
+        <div class="property-price" style="font-size:1.9rem">₹12,000<small> / night</small></div>
+        <div class="cell-sub mb-3">Weekend & festival rates may vary</div>
+        <a href="bookings.html" class="btn btn-primary w-100 mb-2"><i class="bi bi-calendar-plus me-1"></i> Create booking</a>
+        <a href="whatsapp.html" class="btn btn-whatsapp w-100"><i class="bi bi-whatsapp me-1"></i> Send details</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">Booking History</div>
+      <div class="card-body p-0">
+        <table class="table">
+          <tbody>
+            <tr><td><div class="cell-strong">Rahul Mehta</div><div class="cell-sub">18–22 Jun 2026</div></td>
+              <td class="text-end"><span class="badge-soft b-confirmed">Confirmed</span><div class="cell-sub mt-1">₹48,000</div></td></tr>
+            <tr><td><div class="cell-strong">Priya Nair</div><div class="cell-sub">2–5 Jun 2026</div></td>
+              <td class="text-end"><span class="badge-soft b-completed">Completed</span><div class="cell-sub mt-1">₹36,000</div></td></tr>
+            <tr><td><div class="cell-strong">Vivek Rao</div><div class="cell-sub">20–24 May 2026</div></td>
+              <td class="text-end"><span class="badge-soft b-completed">Completed</span><div class="cell-sub mt-1">₹48,000</div></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </main>
+  </div>
+
+  
+  <div class="modal fade" id="confirmModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content">
+        <div class="modal-body text-center p-4">
+          <div class="stat-ico tile-red mx-auto mb-3"><i class="bi bi-exclamation-triangle"></i></div>
+          <h5 class="mb-1">Delete this record?</h5>
+          <p class="text-soft small" id="confirmText">This action can’t be undone.</p>
+          <div class="d-flex gap-2 justify-content-center mt-3">
+            <button class="btn btn-soft" data-bs-dismiss="modal">Keep it</button>
+            <button class="btn btn-primary" data-bs-dismiss="modal"
+                    data-toast="Record deleted." style="background:var(--danger);border-color:var(--danger)">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  
+</body>
+</html>

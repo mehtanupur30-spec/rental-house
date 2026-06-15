@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports · RentEase Admin</title>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  
+  <link href="assets/css/app.css" rel="stylesheet">
+</head>
+<body class="app-shell">
+
+  
+  
+<aside class="sidebar">
+
+  
+  <div class="sidebar__brand">
+    <div class="brand-logo"><i class="bi bi-houses-fill"></i></div>
+    <div class="brand-name">Rent<span>Ease</span></div>
+  </div>
+
+  
+  <nav class="sidebar__scroll">
+
+    <div class="nav-label">Overview</div>
+    <a class="nav-link " href="dashboard.html">
+      <i class="bi bi-grid-1x2-fill"></i> <span>Dashboard</span>
+    </a>
+
+    <div class="nav-label">Operations</div>
+    <a class="nav-link " href="houses.html">
+      <i class="bi bi-building"></i> <span>House Management</span>
+    </a>
+    <a class="nav-link " href="customers.html">
+      <i class="bi bi-people-fill"></i> <span>Parties / Customers</span>
+    </a>
+    <a class="nav-link " href="bookings.html">
+      <i class="bi bi-calendar2-check-fill"></i> <span>Bookings</span>
+      <span class="nav-badge">6</span>
+    </a>
+    <a class="nav-link " href="payments.html">
+      <i class="bi bi-cash-coin"></i> <span>Payments</span>
+    </a>
+
+    <div class="nav-label">Insights & Tools</div>
+    <a class="nav-link active" href="reports.html">
+      <i class="bi bi-bar-chart-line-fill"></i> <span>Reports</span>
+    </a>
+    <a class="nav-link " href="whatsapp.html">
+      <i class="bi bi-whatsapp"></i> <span>WhatsApp Share</span>
+    </a>
+    <a class="nav-link " href="settings.html">
+      <i class="bi bi-gear-fill"></i> <span>Settings</span>
+    </a>
+  </nav>
+</aside>
+
+
+  
+  <div class="sidebar-backdrop"></div>
+
+  
+  <div class="main">
+
+    
+    
+<header class="topbar">
+
+  
+  <button class="icon-btn" data-sidebar-toggle aria-label="Toggle menu">
+    <i class="bi bi-list"></i>
+  </button>
+
+  
+  <div class="topbar__search">
+    <i class="bi bi-search"></i>
+    <input type="search" placeholder="Search houses, bookings, customers…" aria-label="Search">
+  </div>
+
+  <div class="ms-auto d-flex align-items-center gap-2">
+
+    
+    <a href="bookings.html" class="btn btn-primary d-none d-sm-inline-flex align-items-center gap-2">
+      <i class="bi bi-plus-lg"></i> New Booking
+    </a>
+
+    
+    <div class="dropdown">
+      <button class="icon-btn" data-bs-toggle="dropdown" aria-label="Notifications">
+        <i class="bi bi-bell"></i><span class="dot"></span>
+      </button>
+      <div class="dropdown-menu dropdown-menu-end" style="width:340px">
+        <div class="d-flex justify-content-between align-items-center px-2 py-1">
+          <strong>Notifications</strong>
+          <span class="badge-soft b-booked">3 new</span>
+        </div>
+        <hr class="my-2">
+        <a class="notif-item text-reset" href="bookings.html">
+          <div class="notif-ico tile-green"><i class="bi bi-calendar-check"></i></div>
+          <div><div class="fw-semibold small">New booking confirmed</div>
+            <div class="cell-sub">Villa Marina · check-in Jun 18</div></div>
+        </a>
+        <a class="notif-item text-reset" href="payments.html">
+          <div class="notif-ico tile-amber"><i class="bi bi-exclamation-circle"></i></div>
+          <div><div class="fw-semibold small">Pending balance reminder</div>
+            <div class="cell-sub">₹18,000 due from R. Mehta</div></div>
+        </a>
+        <a class="notif-item text-reset" href="houses.html">
+          <div class="notif-ico tile-blue"><i class="bi bi-house-add"></i></div>
+          <div><div class="fw-semibold small">Listing went live</div>
+            <div class="cell-sub">Cedar Cottage is now available</div></div>
+        </a>
+        <hr class="my-2">
+        <a href="bookings.html" class="dropdown-item text-center text-orange fw-semibold">View all activity</a>
+      </div>
+    </div>
+
+    
+    <div class="dropdown">
+      <div class="topbar__profile" data-bs-toggle="dropdown" role="button">
+        <div class="avatar">AM</div>
+        <div class="profile-name lh-1">
+          <div class="fw-semibold small">Anita Malhotra</div>
+          <div class="cell-sub">Administrator</div>
+        </div>
+        <i class="bi bi-chevron-down small text-muted-2"></i>
+      </div>
+      <div class="dropdown-menu dropdown-menu-end" style="width:220px">
+        <div class="px-2 py-1 small text-soft">Signed in as<br><strong class="text-dark">anita@rentease.app</strong></div>
+        <hr class="my-2">
+        <a class="dropdown-item" href="settings.html"><i class="bi bi-person"></i> My Profile</a>
+        <a class="dropdown-item" href="settings.html"><i class="bi bi-gear"></i> Settings</a>
+        <a class="dropdown-item" href="reports.html"><i class="bi bi-graph-up"></i> Reports</a>
+        <hr class="my-2">
+        <a class="dropdown-item text-danger" href="login.html"><i class="bi bi-box-arrow-right"></i> Sign out</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    
+    <main class="content">
+
+      
+      <div class="page-head">
+        <div>
+          <h1>Reports</h1>
+          <p class="text-soft mb-2">Analyse bookings, revenue and outstanding balances.</p>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="dashboard.html"><i class="bi bi-house-door"></i></a></li>
+              
+  <li class="breadcrumb-item active">Reports</li>
+
+            </ol>
+          </nav>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+          
+  <button class="btn btn-outline-navy" data-toast="Exporting to PDF…"><i class="bi bi-file-earmark-pdf me-1"></i> PDF</button>
+  <button class="btn btn-primary" data-toast="Exporting to Excel…"><i class="bi bi-file-earmark-excel me-1"></i> Excel</button>
+
+        </div>
+      </div>
+
+      
+      
+
+
+<div class="card mb-3">
+  <div class="card-body">
+    <div class="row g-2 align-items-end">
+      <div class="col-6 col-md-3"><label class="form-label">From</label><input type="date" class="form-control"></div>
+      <div class="col-6 col-md-3"><label class="form-label">To</label><input type="date" class="form-control"></div>
+      <div class="col-6 col-md-3"><label class="form-label">Property</label>
+        <select class="form-select"><option>All properties</option><option>Villa Marina</option><option>Cedar Cottage</option></select></div>
+      <div class="col-6 col-md-3 d-grid"><label class="form-label d-none d-md-block">&nbsp;</label>
+        <button class="btn btn-navy" data-toast="Report updated."><i class="bi bi-funnel me-1"></i> Apply filters</button></div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row g-3 mb-3">
+  <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-ico tile-orange"><i class="bi bi-calendar2-check"></i></div>
+    <div><div class="label">Bookings</div><div class="value">312</div></div></div></div>
+  <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-ico tile-green"><i class="bi bi-cash-coin"></i></div>
+    <div><div class="label">Revenue</div><div class="value">₹42.6L</div></div></div></div>
+  <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-ico tile-blue"><i class="bi bi-graph-up-arrow"></i></div>
+    <div><div class="label">Avg booking</div><div class="value">₹13.6k</div></div></div></div>
+  <div class="col-6 col-md-3"><div class="stat-card"><div class="stat-ico tile-red"><i class="bi bi-hourglass-split"></i></div>
+    <div><div class="label">Outstanding</div><div class="value">₹1.8L</div></div></div></div>
+</div>
+
+
+<div class="card mb-3">
+  <div class="card-header">Monthly Revenue</div>
+  <div class="card-body">
+    <div class="d-flex align-items-end gap-3" style="height:200px">
+      
+      
+        <div class="text-center flex-fill">
+          <div style="height:160px;display:flex;align-items:flex-end">
+            <div class="w-100 rounded-top" style="height:55%;background:linear-gradient(180deg,var(--orange-400),var(--orange-600))"></div>
+          </div>
+          <div class="cell-sub mt-2">Jan</div>
+        </div>
+      
+        <div class="text-center flex-fill">
+          <div style="height:160px;display:flex;align-items:flex-end">
+            <div class="w-100 rounded-top" style="height:62%;background:linear-gradient(180deg,var(--orange-400),var(--orange-600))"></div>
+          </div>
+          <div class="cell-sub mt-2">Feb</div>
+        </div>
+      
+        <div class="text-center flex-fill">
+          <div style="height:160px;display:flex;align-items:flex-end">
+            <div class="w-100 rounded-top" style="height:48%;background:linear-gradient(180deg,var(--orange-400),var(--orange-600))"></div>
+          </div>
+          <div class="cell-sub mt-2">Mar</div>
+        </div>
+      
+        <div class="text-center flex-fill">
+          <div style="height:160px;display:flex;align-items:flex-end">
+            <div class="w-100 rounded-top" style="height:70%;background:linear-gradient(180deg,var(--orange-400),var(--orange-600))"></div>
+          </div>
+          <div class="cell-sub mt-2">Apr</div>
+        </div>
+      
+        <div class="text-center flex-fill">
+          <div style="height:160px;display:flex;align-items:flex-end">
+            <div class="w-100 rounded-top" style="height:82%;background:linear-gradient(180deg,var(--orange-400),var(--orange-600))"></div>
+          </div>
+          <div class="cell-sub mt-2">May</div>
+        </div>
+      
+        <div class="text-center flex-fill">
+          <div style="height:160px;display:flex;align-items:flex-end">
+            <div class="w-100 rounded-top" style="height:95%;background:linear-gradient(180deg,var(--orange-400),var(--orange-600))"></div>
+          </div>
+          <div class="cell-sub mt-2">Jun</div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="card table-card">
+  <div class="card-header p-0 border-0">
+    <ul class="nav nav-pills p-2 gap-1">
+      <li class="nav-item"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#tab-book">Booking Report</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-pay">Payment Report</button></li>
+      <li class="nav-item"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#tab-pend">Pending Balances</button></li>
+    </ul>
+  </div>
+  <div class="tab-content">
+    
+    <div class="tab-pane fade show active" id="tab-book">
+      <div class="table-responsive"><table class="table align-middle">
+        <thead><tr><th>Booking</th><th>Property</th><th>Guest</th><th>Nights</th><th>Amount</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td class="cell-strong">#BK-1042</td><td>Villa Marina</td><td>Rahul Mehta</td><td>4</td><td class="cell-strong">₹48,000</td><td><span class="badge-soft b-confirmed">Confirmed</span></td></tr>
+          <tr><td class="cell-strong">#BK-1040</td><td>Lake House 2BR</td><td>Arjun Kapoor</td><td>3</td><td class="cell-strong">₹61,000</td><td><span class="badge-soft b-completed">Completed</span></td></tr>
+          <tr><td class="cell-strong">#BK-1037</td><td>Palm Court 3BR</td><td>Ritu Saxena</td><td>2</td><td class="cell-strong">₹17,200</td><td><span class="badge-soft b-completed">Completed</span></td></tr>
+        </tbody></table></div>
+    </div>
+    
+    <div class="tab-pane fade" id="tab-pay">
+      <div class="table-responsive"><table class="table align-middle">
+        <thead><tr><th>Receipt</th><th>Guest</th><th>Method</th><th>Date</th><th>Amount</th></tr></thead>
+        <tbody>
+          <tr><td class="cell-strong">RC-5012</td><td>Rahul Mehta</td><td>UPI</td><td>12 Jun 2026</td><td class="cell-strong">₹30,000</td></tr>
+          <tr><td class="cell-strong">RC-5011</td><td>Sneha Patel</td><td>Card</td><td>11 Jun 2026</td><td class="cell-strong">₹28,500</td></tr>
+          <tr><td class="cell-strong">RC-5010</td><td>Manish Khanna</td><td>Cash</td><td>10 Jun 2026</td><td class="cell-strong">₹30,000</td></tr>
+        </tbody></table></div>
+    </div>
+    
+    <div class="tab-pane fade" id="tab-pend">
+      <div class="table-responsive"><table class="table align-middle">
+        <thead><tr><th>Booking</th><th>Guest</th><th>Due date</th><th>Balance</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td class="cell-strong">#BK-1038</td><td>Manish Khanna</td><td>17 Jun 2026</td><td class="text-orange fw-semibold">₹24,200</td><td><span class="badge-soft b-pending">Pending</span></td></tr>
+          <tr><td class="cell-strong">#BK-1042</td><td>Rahul Mehta</td><td>10 Jun 2026</td><td class="text-orange fw-semibold">₹18,000</td><td><span class="badge-soft b-overdue">Overdue</span></td></tr>
+        </tbody></table></div>
+    </div>
+  </div>
+</div>
+
+    </main>
+  </div>
+
+  
+  <div class="modal fade" id="confirmModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content">
+        <div class="modal-body text-center p-4">
+          <div class="stat-ico tile-red mx-auto mb-3"><i class="bi bi-exclamation-triangle"></i></div>
+          <h5 class="mb-1">Delete this record?</h5>
+          <p class="text-soft small" id="confirmText">This action can’t be undone.</p>
+          <div class="d-flex gap-2 justify-content-center mt-3">
+            <button class="btn btn-soft" data-bs-dismiss="modal">Keep it</button>
+            <button class="btn btn-primary" data-bs-dismiss="modal"
+                    data-toast="Record deleted." style="background:var(--danger);border-color:var(--danger)">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  
+
+<style>
+  .nav-pills .nav-link{color:var(--ink-soft);font-weight:600;border-radius:10px;padding:.5rem 1rem}
+  .nav-pills .nav-link.active{background:var(--orange-50);color:var(--orange-600)}
+</style>
+
+</body>
+</html>

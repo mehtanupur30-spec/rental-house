@@ -1,0 +1,526 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>House Management · RentEase Admin</title>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  
+  <link href="assets/css/app.css" rel="stylesheet">
+</head>
+<body class="app-shell">
+
+  
+  
+<aside class="sidebar">
+
+  
+  <div class="sidebar__brand">
+    <div class="brand-logo"><i class="bi bi-houses-fill"></i></div>
+    <div class="brand-name">Rent<span>Ease</span></div>
+  </div>
+
+  
+  <nav class="sidebar__scroll">
+
+    <div class="nav-label">Overview</div>
+    <a class="nav-link " href="dashboard.html">
+      <i class="bi bi-grid-1x2-fill"></i> <span>Dashboard</span>
+    </a>
+
+    <div class="nav-label">Operations</div>
+    <a class="nav-link active" href="houses.html">
+      <i class="bi bi-building"></i> <span>House Management</span>
+    </a>
+    <a class="nav-link " href="customers.html">
+      <i class="bi bi-people-fill"></i> <span>Parties / Customers</span>
+    </a>
+    <a class="nav-link " href="bookings.html">
+      <i class="bi bi-calendar2-check-fill"></i> <span>Bookings</span>
+      <span class="nav-badge">6</span>
+    </a>
+    <a class="nav-link " href="payments.html">
+      <i class="bi bi-cash-coin"></i> <span>Payments</span>
+    </a>
+
+    <div class="nav-label">Insights & Tools</div>
+    <a class="nav-link " href="reports.html">
+      <i class="bi bi-bar-chart-line-fill"></i> <span>Reports</span>
+    </a>
+    <a class="nav-link " href="whatsapp.html">
+      <i class="bi bi-whatsapp"></i> <span>WhatsApp Share</span>
+    </a>
+    <a class="nav-link " href="settings.html">
+      <i class="bi bi-gear-fill"></i> <span>Settings</span>
+    </a>
+  </nav>
+</aside>
+
+
+  
+  <div class="sidebar-backdrop"></div>
+
+  
+  <div class="main">
+
+    
+    
+<header class="topbar">
+
+  
+  <button class="icon-btn" data-sidebar-toggle aria-label="Toggle menu">
+    <i class="bi bi-list"></i>
+  </button>
+
+  
+  <div class="topbar__search">
+    <i class="bi bi-search"></i>
+    <input type="search" placeholder="Search houses, bookings, customers…" aria-label="Search">
+  </div>
+
+  <div class="ms-auto d-flex align-items-center gap-2">
+
+    
+    <a href="bookings.html" class="btn btn-primary d-none d-sm-inline-flex align-items-center gap-2">
+      <i class="bi bi-plus-lg"></i> New Booking
+    </a>
+
+    
+    <div class="dropdown">
+      <button class="icon-btn" data-bs-toggle="dropdown" aria-label="Notifications">
+        <i class="bi bi-bell"></i><span class="dot"></span>
+      </button>
+      <div class="dropdown-menu dropdown-menu-end" style="width:340px">
+        <div class="d-flex justify-content-between align-items-center px-2 py-1">
+          <strong>Notifications</strong>
+          <span class="badge-soft b-booked">3 new</span>
+        </div>
+        <hr class="my-2">
+        <a class="notif-item text-reset" href="bookings.html">
+          <div class="notif-ico tile-green"><i class="bi bi-calendar-check"></i></div>
+          <div><div class="fw-semibold small">New booking confirmed</div>
+            <div class="cell-sub">Villa Marina · check-in Jun 18</div></div>
+        </a>
+        <a class="notif-item text-reset" href="payments.html">
+          <div class="notif-ico tile-amber"><i class="bi bi-exclamation-circle"></i></div>
+          <div><div class="fw-semibold small">Pending balance reminder</div>
+            <div class="cell-sub">₹18,000 due from R. Mehta</div></div>
+        </a>
+        <a class="notif-item text-reset" href="houses.html">
+          <div class="notif-ico tile-blue"><i class="bi bi-house-add"></i></div>
+          <div><div class="fw-semibold small">Listing went live</div>
+            <div class="cell-sub">Cedar Cottage is now available</div></div>
+        </a>
+        <hr class="my-2">
+        <a href="bookings.html" class="dropdown-item text-center text-orange fw-semibold">View all activity</a>
+      </div>
+    </div>
+
+    
+    <div class="dropdown">
+      <div class="topbar__profile" data-bs-toggle="dropdown" role="button">
+        <div class="avatar">AM</div>
+        <div class="profile-name lh-1">
+          <div class="fw-semibold small">Anita Malhotra</div>
+          <div class="cell-sub">Administrator</div>
+        </div>
+        <i class="bi bi-chevron-down small text-muted-2"></i>
+      </div>
+      <div class="dropdown-menu dropdown-menu-end" style="width:220px">
+        <div class="px-2 py-1 small text-soft">Signed in as<br><strong class="text-dark">anita@rentease.app</strong></div>
+        <hr class="my-2">
+        <a class="dropdown-item" href="settings.html"><i class="bi bi-person"></i> My Profile</a>
+        <a class="dropdown-item" href="settings.html"><i class="bi bi-gear"></i> Settings</a>
+        <a class="dropdown-item" href="reports.html"><i class="bi bi-graph-up"></i> Reports</a>
+        <hr class="my-2">
+        <a class="dropdown-item text-danger" href="login.html"><i class="bi bi-box-arrow-right"></i> Sign out</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    
+    <main class="content">
+
+      
+      <div class="page-head">
+        <div>
+          <h1>House Management</h1>
+          <p class="text-soft mb-2">Browse, search and manage every property in your portfolio.</p>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="dashboard.html"><i class="bi bi-house-door"></i></a></li>
+              
+  <li class="breadcrumb-item active">Houses</li>
+
+            </ol>
+          </nav>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+          
+  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addHouseModal">
+    <i class="bi bi-plus-lg me-1"></i> Add House
+  </button>
+
+        </div>
+      </div>
+
+      
+      
+
+
+<div class="card mb-3">
+  <div class="card-body">
+    <div class="toolbar">
+      <div class="search">
+        <i class="bi bi-search"></i>
+        <input type="search" class="form-control" placeholder="Search by name or location…"
+               data-filter="#houseGrid" data-filter-empty="#houseEmpty">
+      </div>
+      <select class="form-select" style="max-width:170px">
+        <option value="">All statuses</option><option>Available</option>
+        <option>Booked</option><option>Maintenance</option>
+      </select>
+      <select class="form-select" style="max-width:170px">
+        <option value="">All types</option><option>Villa</option>
+        <option>Cottage</option><option>Apartment</option><option>Bungalow</option>
+      </select>
+      <button class="btn btn-soft"><i class="bi bi-funnel me-1"></i> More filters</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="row g-3" id="houseGrid">
+  
+
+  
+  <div class="col-12 col-sm-6 col-xl-4" data-filter-item>
+    <div class="card property-card h-100">
+      <div class="property-media">
+        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80" alt="Villa Marina">
+        <span class="badge-soft b-available">Available</span>
+        <button class="property-fav" title="Save"><i class="bi bi-bookmark"></i></button>
+      </div>
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <h5 class="mb-1" style="font-size:1.05rem">Villa Marina</h5>
+            <div class="cell-sub"><i class="bi bi-geo-alt text-orange"></i> Goa Beachfront</div>
+          </div>
+          <span class="badge-soft b-maint">Villa</span>
+        </div>
+        <div class="prop-meta my-3">
+          <span><i class="bi bi-door-closed"></i>4 Beds</span>
+          <span><i class="bi bi-droplet"></i>3 Baths</span>
+          <span><i class="bi bi-arrows-fullscreen"></i>2,400 sqft</span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+          <div class="property-price">₹12,000<small> / night</small></div>
+          <div class="d-flex gap-1">
+            <a href="house-details.html" class="btn btn-soft btn-icon" title="View"><i class="bi bi-eye"></i></a>
+            <button class="btn btn-soft btn-icon" data-bs-toggle="modal" data-bs-target="#addHouseModal" title="Edit"><i class="bi bi-pencil"></i></button>
+            <button class="btn btn-soft btn-icon" data-confirm="Delete “Villa Marina” from your portfolio?" title="Delete"><i class="bi bi-trash"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-12 col-sm-6 col-xl-4" data-filter-item>
+    <div class="card property-card h-100">
+      <div class="property-media">
+        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80" alt="Cedar Cottage">
+        <span class="badge-soft b-booked">Booked</span>
+        <button class="property-fav" title="Save"><i class="bi bi-bookmark"></i></button>
+      </div>
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <h5 class="mb-1" style="font-size:1.05rem">Cedar Cottage</h5>
+            <div class="cell-sub"><i class="bi bi-geo-alt text-orange"></i> Lonavala Hills</div>
+          </div>
+          <span class="badge-soft b-maint">Cottage</span>
+        </div>
+        <div class="prop-meta my-3">
+          <span><i class="bi bi-door-closed"></i>2 Beds</span>
+          <span><i class="bi bi-droplet"></i>2 Baths</span>
+          <span><i class="bi bi-arrows-fullscreen"></i>1,100 sqft</span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+          <div class="property-price">₹7,500<small> / night</small></div>
+          <div class="d-flex gap-1">
+            <a href="house-details.html" class="btn btn-soft btn-icon" title="View"><i class="bi bi-eye"></i></a>
+            <button class="btn btn-soft btn-icon" data-bs-toggle="modal" data-bs-target="#addHouseModal" title="Edit"><i class="bi bi-pencil"></i></button>
+            <button class="btn btn-soft btn-icon" data-confirm="Delete “Cedar Cottage” from your portfolio?" title="Delete"><i class="bi bi-trash"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-12 col-sm-6 col-xl-4" data-filter-item>
+    <div class="card property-card h-100">
+      <div class="property-media">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Lake House 2BR">
+        <span class="badge-soft b-available">Available</span>
+        <button class="property-fav" title="Save"><i class="bi bi-bookmark"></i></button>
+      </div>
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <h5 class="mb-1" style="font-size:1.05rem">Lake House 2BR</h5>
+            <div class="cell-sub"><i class="bi bi-geo-alt text-orange"></i> Udaipur Lakeside</div>
+          </div>
+          <span class="badge-soft b-maint">Villa</span>
+        </div>
+        <div class="prop-meta my-3">
+          <span><i class="bi bi-door-closed"></i>3 Beds</span>
+          <span><i class="bi bi-droplet"></i>2 Baths</span>
+          <span><i class="bi bi-arrows-fullscreen"></i>1,800 sqft</span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+          <div class="property-price">₹15,500<small> / night</small></div>
+          <div class="d-flex gap-1">
+            <a href="house-details.html" class="btn btn-soft btn-icon" title="View"><i class="bi bi-eye"></i></a>
+            <button class="btn btn-soft btn-icon" data-bs-toggle="modal" data-bs-target="#addHouseModal" title="Edit"><i class="bi bi-pencil"></i></button>
+            <button class="btn btn-soft btn-icon" data-confirm="Delete “Lake House 2BR” from your portfolio?" title="Delete"><i class="bi bi-trash"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-12 col-sm-6 col-xl-4" data-filter-item>
+    <div class="card property-card h-100">
+      <div class="property-media">
+        <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80" alt="Sunset Apartment">
+        <span class="badge-soft b-maint">Maintenance</span>
+        <button class="property-fav" title="Save"><i class="bi bi-bookmark"></i></button>
+      </div>
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <h5 class="mb-1" style="font-size:1.05rem">Sunset Apartment</h5>
+            <div class="cell-sub"><i class="bi bi-geo-alt text-orange"></i> Mumbai Bandra</div>
+          </div>
+          <span class="badge-soft b-maint">Apartment</span>
+        </div>
+        <div class="prop-meta my-3">
+          <span><i class="bi bi-door-closed"></i>2 Beds</span>
+          <span><i class="bi bi-droplet"></i>1 Baths</span>
+          <span><i class="bi bi-arrows-fullscreen"></i>950 sqft</span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+          <div class="property-price">₹9,200<small> / night</small></div>
+          <div class="d-flex gap-1">
+            <a href="house-details.html" class="btn btn-soft btn-icon" title="View"><i class="bi bi-eye"></i></a>
+            <button class="btn btn-soft btn-icon" data-bs-toggle="modal" data-bs-target="#addHouseModal" title="Edit"><i class="bi bi-pencil"></i></button>
+            <button class="btn btn-soft btn-icon" data-confirm="Delete “Sunset Apartment” from your portfolio?" title="Delete"><i class="bi bi-trash"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-12 col-sm-6 col-xl-4" data-filter-item>
+    <div class="card property-card h-100">
+      <div class="property-media">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80" alt="Hillview Bungalow">
+        <span class="badge-soft b-booked">Booked</span>
+        <button class="property-fav" title="Save"><i class="bi bi-bookmark"></i></button>
+      </div>
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <h5 class="mb-1" style="font-size:1.05rem">Hillview Bungalow</h5>
+            <div class="cell-sub"><i class="bi bi-geo-alt text-orange"></i> Manali</div>
+          </div>
+          <span class="badge-soft b-maint">Bungalow</span>
+        </div>
+        <div class="prop-meta my-3">
+          <span><i class="bi bi-door-closed"></i>5 Beds</span>
+          <span><i class="bi bi-droplet"></i>4 Baths</span>
+          <span><i class="bi bi-arrows-fullscreen"></i>3,100 sqft</span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+          <div class="property-price">₹13,800<small> / night</small></div>
+          <div class="d-flex gap-1">
+            <a href="house-details.html" class="btn btn-soft btn-icon" title="View"><i class="bi bi-eye"></i></a>
+            <button class="btn btn-soft btn-icon" data-bs-toggle="modal" data-bs-target="#addHouseModal" title="Edit"><i class="bi bi-pencil"></i></button>
+            <button class="btn btn-soft btn-icon" data-confirm="Delete “Hillview Bungalow” from your portfolio?" title="Delete"><i class="bi bi-trash"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-12 col-sm-6 col-xl-4" data-filter-item>
+    <div class="card property-card h-100">
+      <div class="property-media">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Palm Court 3BR">
+        <span class="badge-soft b-available">Available</span>
+        <button class="property-fav" title="Save"><i class="bi bi-bookmark"></i></button>
+      </div>
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <h5 class="mb-1" style="font-size:1.05rem">Palm Court 3BR</h5>
+            <div class="cell-sub"><i class="bi bi-geo-alt text-orange"></i> Pune Koregaon</div>
+          </div>
+          <span class="badge-soft b-maint">Apartment</span>
+        </div>
+        <div class="prop-meta my-3">
+          <span><i class="bi bi-door-closed"></i>3 Beds</span>
+          <span><i class="bi bi-droplet"></i>2 Baths</span>
+          <span><i class="bi bi-arrows-fullscreen"></i>1,450 sqft</span>
+        </div>
+        <div class="d-flex justify-content-between align-items-center pt-2 border-top">
+          <div class="property-price">₹8,600<small> / night</small></div>
+          <div class="d-flex gap-1">
+            <a href="house-details.html" class="btn btn-soft btn-icon" title="View"><i class="bi bi-eye"></i></a>
+            <button class="btn btn-soft btn-icon" data-bs-toggle="modal" data-bs-target="#addHouseModal" title="Edit"><i class="bi bi-pencil"></i></button>
+            <button class="btn btn-soft btn-icon" data-confirm="Delete “Palm Court 3BR” from your portfolio?" title="Delete"><i class="bi bi-trash"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+
+<div id="houseEmpty" class="empty-state" style="display:none">
+  <i class="bi bi-house-slash"></i>
+  <h5>No matching houses</h5>
+  <p>Try a different name or location, or clear the filters to see everything again.</p>
+  <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addHouseModal"><i class="bi bi-plus-lg me-1"></i> Add a house</button>
+</div>
+
+
+<nav class="d-flex justify-content-between align-items-center mt-4">
+  <span class="cell-sub">Showing 1–6 of 124 properties</span>
+  <ul class="pagination">
+    <li class="page-item disabled"><span class="page-link"><i class="bi bi-chevron-left"></i></span></li>
+    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+  </ul>
+</nav>
+
+    </main>
+  </div>
+
+  
+  <div class="modal fade" id="confirmModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+      <div class="modal-content">
+        <div class="modal-body text-center p-4">
+          <div class="stat-ico tile-red mx-auto mb-3"><i class="bi bi-exclamation-triangle"></i></div>
+          <h5 class="mb-1">Delete this record?</h5>
+          <p class="text-soft small" id="confirmText">This action can’t be undone.</p>
+          <div class="d-flex gap-2 justify-content-center mt-3">
+            <button class="btn btn-soft" data-bs-dismiss="modal">Keep it</button>
+            <button class="btn btn-primary" data-bs-dismiss="modal"
+                    data-toast="Record deleted." style="background:var(--danger);border-color:var(--danger)">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  
+<div class="modal fade" id="addHouseModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <form class="needs-validation" data-success="House saved successfully." novalidate>
+        <div class="modal-header">
+          <h5 class="modal-title">Add a new house</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">House name</label>
+              <input class="form-control" placeholder="e.g. Villa Marina" required>
+              <div class="invalid-feedback">Please enter a house name.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Property type</label>
+              <select class="form-select" required>
+                <option value="">Choose type…</option><option>Villa</option><option>Cottage</option>
+                <option>Apartment</option><option>Bungalow</option>
+              </select>
+              <div class="invalid-feedback">Select a property type.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Location</label>
+              <input class="form-control" placeholder="City / area" required>
+              <div class="invalid-feedback">Location is required.</div>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Price per night</label>
+              <div class="input-group">
+                <span class="input-group-text input-affix">₹</span>
+                <input type="number" class="form-control" placeholder="0" min="0" required>
+              </div>
+              <div class="invalid-feedback">Enter a nightly price.</div>
+            </div>
+            <div class="col-4"><label class="form-label">Bedrooms</label><input type="number" class="form-control" min="0" value="2"></div>
+            <div class="col-4"><label class="form-label">Bathrooms</label><input type="number" class="form-control" min="0" value="1"></div>
+            <div class="col-4"><label class="form-label">Area (sqft)</label><input type="number" class="form-control" min="0" value="1000"></div>
+            <div class="col-12">
+              <label class="form-label">Description</label>
+              <textarea class="form-control" rows="2" placeholder="Short summary shown to customers"></textarea>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Photos</label>
+              <div class="border rounded-3 text-center p-4" style="border-style:dashed!important;border-color:var(--line)">
+                <i class="bi bi-cloud-arrow-up fs-3 text-orange"></i>
+                <div class="small text-soft mt-1">Drag images here or <span class="text-orange fw-semibold">browse</span></div>
+                <input type="file" class="form-control mt-2" multiple accept="image/*">
+              </div>
+            </div>
+            <div class="col-12">
+              <label class="form-label">Property video <span class="text-soft fw-normal">(optional)</span></label>
+              <div class="border rounded-3 text-center p-4" style="border-style:dashed!important;border-color:var(--line)">
+                <i class="bi bi-camera-video fs-3 text-orange"></i>
+                <div class="small text-soft mt-1">Upload a walkthrough video or <span class="text-orange fw-semibold">browse</span></div>
+                <input type="file" class="form-control mt-2" accept="video/*">
+                <div class="small text-soft mt-2">— or paste a video link —</div>
+                <input type="url" class="form-control mt-1" placeholder="https://youtube.com/... or video URL">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-soft" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary"><i class="bi bi-check-lg me-1"></i> Save house</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
+  
+</body>
+</html>
